@@ -7,117 +7,76 @@ body {
 }
 
 body {
-    height: 100vh;
-    background: #1F0252;
+    padding: 2em;
+    background: #5801CB;
     color: white;
     font-family: 'Nunito';
 }
 
-header {
-    background: #7141C4;
-    height: 2em;
-}
-
-.container {
-    padding: 3em 2em 2em;
-    background: #811573;
-}
-
 h1 {
-    margin: 0;
-    color: #617BFF;
+    font-size: 1.1em;
 }
 
-a {
-    background: #157A81;
-    padding: .5em 2.3em;
-    display: inline-block;
-    color: #3C1581;
-    text-decoration: none;
-    border-radius: 1em;
-    font-weight: bold;
-    font-size: .9em;
-    margin-top: 1.5em;
-    margin-bottom: 2em;
+.form-container {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "label label"
+        "submit button"
+        "info info";
 }
 
-p {
-    color: #FF6EEC;
+label {
+    display: block;
+    font-size: 1.1em;
+    grid-area: label;
+    margin-bottom: .8em;
 }
 
-footer {
-    height: 2em;
-    background: #1F0252;
-}
-
-/* Overwrites */
-
-.container {
-    background: #3C1581;
-}
-
-h1,
-p {
-    color: white;
-}
-
-a {
-    background: #FEED00;
-}
-
-/* Type- 1
-body {
-    background: #1C2022;
-}
-
-.container {
-    border-left: .7em solid #FF01FF;
-}
-
-p {
-    color: #9D9D9D;
-}
-
-input[type=text],
-textarea {
-    background: #2B3337;
-    border-bottom: 1px solid #506671;
-    color: #9D9D9D;
-}
-
-input[type=text]:focus,
-textarea:focus {
-    border-bottom: 1px solid #FF01FF;
+input[type=text] {
+    width: 90%;
+    padding: .5em;
 }
 
 input[type=submit] {
-    background: #FF01FF;
-} */
-
-/*Type- 2
-body {
-    background: #2B3337;
-}
-
-input[type=text],
-textarea {
-    background: #1C2022;
-}
-*/
-
-/*Type- 3
-
-body {
-    background: white;
-    color: #1C2022;
+    padding: .5em;
+    font-size: .8em;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
 }
 
 p {
-    color: #2B3337;
+    grid-area: info;
 }
 
-input[type=text],
-textarea {
-    background: white;
+
+/* Improvements */
+
+h1 {
+    font-size: 3em;
 }
-*/
+
+.form-container {
+    background: #6900F3;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+input[type=submit] {
+    font-size: 1em;
+    background: #FFED8C;
+    color: #5801CB;
+    border: none;
+    font-weight: bold;
+}
+
+p {
+    color: #CAA2FF;
+}
