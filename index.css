@@ -3,7 +3,9 @@
 * {
     box-sizing: border-box;
 }
-html, body {
+
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -14,7 +16,7 @@ body {
     padding: .5em;
     font-family: serif;
     height: 100vh;
-    text-align:center;
+    text-align: center;
 }
 
 header {
@@ -127,9 +129,11 @@ ul.data li p {
 ul.data li:last-child p {
     margin-bottom: 0;
 }
+
 ul.secondary {
     margin-top: 2em;
 }
+
 ul.secondary li p {
     font-size: 1.3em;
 }
@@ -141,3 +145,40 @@ main {
 
 /* Your Fixes Below */
 
+body {
+    background: #303A52;
+    font-family: 'Nunito', sans-serif;
+}
+
+nav {
+    background: #2C354A;
+}
+
+main {
+    border: unset;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+a.cta-btn {
+    font-size: .9em;
+    padding: .2em .4em;
+}
+
+nav ul li a {
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: unset;
+}
+
+nav {
+    text-align: left;
+}
