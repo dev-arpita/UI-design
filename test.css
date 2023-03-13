@@ -3,12 +3,9 @@
 * {
     box-sizing: border-box;
 }
-
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -17,7 +14,7 @@ body {
     padding: .5em;
     font-family: serif;
     height: 100vh;
-    text-align: center;
+    text-align:center;
 }
 
 header {
@@ -74,6 +71,7 @@ nav {
     text-align: center;
 }
 
+
 nav p {
     margin-bottom: 0;
 }
@@ -129,11 +127,9 @@ ul.data li p {
 ul.data li:last-child p {
     margin-bottom: 0;
 }
-
 ul.secondary {
     margin-top: 2em;
 }
-
 ul.secondary li p {
     font-size: 1.3em;
 }
@@ -155,7 +151,7 @@ nav {
 }
 
 main {
-    border: unset;
+   border: unset;
 }
 
 a {
@@ -188,113 +184,99 @@ nav {
 .inner-wrapper {
     padding: 1em;
 }
-
 .panel {
     padding: .5em 1em;
     margin-bottom: 2em;
 }
 
-.nav-logo {
-    display: none;
-}
 
 /* Large Phones */
 
-@media (min-width: 520px) {
-
-    .data {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        height: 30%;
-        place-content: center;
-    }
-
-    .data.secondary {
-        grid-template-columns: repeat(4, 1fr);
-        background: #39445F;
-    }
-
-    header {
-        padding: 2em 0 0;
-    }
-
-    h1 {
-        font-size: 3em;
-        text-align: start;
-    }
-
-    .left {
-        max-width: 80%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 20% 80%;
+@media (min-width: 420px) {
+    body {
+        padding: 1em;
         text-align: left;
     }
-
-    .left h3 {
-        align-self: center;
-        justify-self: start;
+    ul.data {
+        display: flex;
+        flex-wrap: wrap;
     }
-
-    a.cta-btn {
-        font-size: 1em;
-        padding: .5em .7em;
+    ul.data li {
+        flex: 0 0 50%;
     }
+}
 
-    .nav-logo {
-        text-align: center;
-        display: block;
-        font-size: 2em;
-        font-weight: 900;
-        margin-bottom: 1em;
+@media (min-width: 550px) {
+    ul.data {
+        justify-content: center;
+    }
+    .panel ul.data li {
+        flex: 0 0 33%;
+    }
+    .panel ul.data li p {
+        margin-bottom: 0;
+    }
+    nav {
+        width: 40%;
+    }
+}
+
+@media (min-width: 720px) {
+    body {
+        padding: 1.5em;
+    }
+    .columns {
+        display: flex;
+    }
+    .col {
+        flex: 0 0 48%;
+    }
+    .secondary {
+        margin-left: 3em;
+    }
+    ul.secondary {
+        margin-top: 0;
+    }
+    nav {
+        width: 30%;
     }
 
 }
 
-@media screen and (min-width: 520px) {
+@media (min-width: 900px) {
     body {
         display: grid;
-        grid-template-columns: 20% auto;
-        padding: 0;
-        text-align: center;
-        height: 100vh;
-        overflow: hidden;
+        grid-template-columns: 20% 80%;
+        gap: 2em;
+        padding: 3em 0 0;
     }
-
-    nav {
-        visibility: visible;
-        opacity: 1;
-        position: relative;
-        transform: translateX(0%);
+    header {
+        position: fixed;
+        top: 0;
+        right: 0;
         width: 100%;
-        padding-top: 2em;
+        height: 50px;
+        background: #1c2336;
+        padding: 1em;
+        z-index: 2;
     }
-
-    #exit-btn {
-        display: none;
+    nav {
+        transform: translateX(0%);
+        visibility: visible;
+        position: relative;
+        opacity: 1;
+        width: 100%;
     }
-
-    .container {
-        max-width: 100%;
-        padding: 0 2em;
-    }
-
     #menu-btn {
         display: none;
     }
-
-    a.logo {
-        font-size: 1.5em;
+    .logo {
         margin: 0;
-        display: none;
-    }
-
-    a.cta-btn {
-        font-size: 1.5em;
     }
 }
 
-/*
+
+ /*
 
 - White Space
 - Color
@@ -312,7 +294,6 @@ nav {
 .width-container {
     display: none;
 }
-
 .display-width {
     display: block;
     position: absolute;
