@@ -8,6 +8,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -72,7 +73,6 @@ nav {
     transition: all .3s;
     text-align: center;
 }
-
 
 nav p {
     margin-bottom: 0;
@@ -194,39 +194,105 @@ nav {
     margin-bottom: 2em;
 }
 
+.nav-logo {
+    display: none;
+}
 
 /* Large Phones */
 
-@media (min-width: 420px) {
-    body {
-        padding: 1em;
+@media (min-width: 520px) {
+
+    .data {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 30%;
+        place-content: center;
+    }
+
+    .data.secondary {
+        grid-template-columns: repeat(4, 1fr);
+        background: #39445F;
+    }
+
+    header {
+        padding: 2em 0 0;
+    }
+
+    h1 {
+        font-size: 3em;
+        text-align: start;
+    }
+
+    .left {
+        max-width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 20% 80%;
         text-align: left;
     }
 
-    ul.data {
-        display: flex;
-        flex-wrap: wrap;
+    .left h3 {
+        align-self: center;
+        justify-self: start;
     }
 
-    ul.data li {
-        flex: 0 0 50%;
+    a.cta-btn {
+        font-size: 1em;
+        padding: .5em .7em;
     }
+
+    .nav-logo {
+        text-align: center;
+        display: block;
+        font-size: 2em;
+        font-weight: 900;
+        margin-bottom: 1em;
+    }
+
 }
 
-@media (min-width: 550px) {
-    ul.data {
-        justify-content: center;
+@media screen and (min-width: 520px) {
+    body {
+        display: grid;
+        grid-template-columns: 20% auto;
+        padding: 0;
+        text-align: center;
+        height: 100vh;
+        overflow: hidden;
     }
 
-    .panel ul.data li {
-        flex: 0 0 33%;
+    nav {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        transform: translateX(0%);
+        width: 100%;
+        padding-top: 2em;
     }
 
-    .panel ul.data li p {
-        margin-bottom: 0;
+    #exit-btn {
+        display: none;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0 2em;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    a.logo {
+        font-size: 1.5em;
+        margin: 0;
+        display: none;
+    }
+
+    a.cta-btn {
+        font-size: 1.5em;
     }
 }
-
 
 /*
 
